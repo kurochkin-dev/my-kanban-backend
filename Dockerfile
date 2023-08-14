@@ -7,6 +7,9 @@ WORKDIR /usr/src/app
 # Копируем package.json и package-lock.json
 COPY package*.json ./
 
+# Устанавливаем конкретную версию npm
+RUN npm install -g npm@9.8.1
+
 # Устанавливаем зависимости
 RUN npm install
 
